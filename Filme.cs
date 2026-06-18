@@ -5,12 +5,23 @@
     public int anoLancamento;
     public int classificacaoIndicativa;
 
+
+
+    public string ObterClassificacaoIndicativa()
+    {
+        if(classificacaoIndicativa <= 0)
+        {
+            return "Livre";
+        }
+        return classificacaoIndicativa + "anos";
+    }
+
     public void ExibirInformacoes()
     {
         Console.WriteLine("\n=== Filme Cadastrado ===");
         Console.WriteLine("Título: " + titulo);
         Console.WriteLine("Gênero: " + genero);
         Console.WriteLine("Ano de lançamento: " + anoLancamento);
-        Console.WriteLine("Classificação: " + classificacaoIndicativa);
+        Console.WriteLine("Classificação: " + ObterClassificacaoIndicativa());
     }
 }
