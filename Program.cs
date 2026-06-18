@@ -1,7 +1,16 @@
 ﻿Filme filme = new Filme();
-filme.titulo = "Avatar";
-filme.genero = "Aventura";
-filme.anoLancamento = 2009;
-filme.classificacaoIndicativa = 12;
+
+Console.Write("Título: ");
+filme.titulo = Console.ReadLine();
+
+Console.Write("Gênero: ");
+filme.genero = Console.ReadLine();
+
+Console.Write("Ano de Lançamento: ");
+filme.anoLancamento = Convert.ToInt32(Console.ReadLine());
+
+
+Console.Write("Classificação Indicativa: ");
+filme.classificacaoIndicativa = Convert.ToInt32(Console.ReadLine());
 
 filme.ExibirInformacoes();
